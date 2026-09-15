@@ -1,6 +1,5 @@
 /* =====================================================
    T.M.R MAKEUP
-   Main Styles
 ===================================================== */
 
 
@@ -20,7 +19,8 @@
 
     --border: #eee1e8;
 
-    --shadow: 0 10px 30px rgba(80, 40, 60, 0.08);
+    --shadow:
+        0 10px 30px rgba(80, 40, 60, 0.08);
 
     --radius: 18px;
 
@@ -57,12 +57,6 @@ body {
 }
 
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
-
 a {
     text-decoration: none;
     color: inherit;
@@ -78,10 +72,11 @@ button {
 
 .container {
 
-    width: min(
-        calc(100% - 40px),
-        var(--container)
-    );
+    width:
+        min(
+            calc(100% - 40px),
+            var(--container)
+        );
 
     margin: 0 auto;
 }
@@ -97,9 +92,11 @@ button {
 
     z-index: 100;
 
-    background: rgba(255, 250, 252, 0.95);
+    background:
+        rgba(255, 250, 252, 0.96);
 
-    border-bottom: 1px solid var(--border);
+    border-bottom:
+        1px solid var(--border);
 
     backdrop-filter: blur(10px);
 }
@@ -126,8 +123,6 @@ button {
     font-weight: 800;
 
     letter-spacing: 1px;
-
-    color: var(--text);
 }
 
 
@@ -152,7 +147,8 @@ button {
 
     font-weight: 600;
 
-    transition: color 0.2s ease;
+    transition:
+        color 0.2s ease;
 }
 
 
@@ -260,11 +256,12 @@ button {
 
 .hero h1 {
 
-    font-size: clamp(
-        3rem,
-        7vw,
-        5.5rem
-    );
+    font-size:
+        clamp(
+            3rem,
+            7vw,
+            5.5rem
+        );
 
     line-height: 0.98;
 
@@ -376,10 +373,11 @@ button {
 
 .hero-circle {
 
-    width: min(
-        400px,
-        80vw
-    );
+    width:
+        min(
+            400px,
+            80vw
+        );
 
     aspect-ratio: 1;
 
@@ -433,11 +431,12 @@ button {
 
 .section-heading h2 {
 
-    font-size: clamp(
-        2rem,
-        4vw,
-        3rem
-    );
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3rem
+        );
 
     line-height: 1.1;
 
@@ -446,7 +445,6 @@ button {
 
 
 .section-heading p:last-child {
-
     color: var(--text-light);
 }
 
@@ -468,7 +466,8 @@ button {
 
     background: white;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
     padding: 35px 28px;
 
@@ -519,7 +518,6 @@ button {
 /* ================= PRODUCTS ================= */
 
 .products-section {
-
     background: white;
 }
 
@@ -541,7 +539,8 @@ button {
 
     background: var(--cream);
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
 
     border-radius: var(--radius);
 
@@ -559,30 +558,47 @@ button {
 }
 
 
+/* ================= PRODUCT IMAGE ================= */
+
 .product-image {
 
+    width: 100%;
+
     aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    background: var(--pink-light);
 
     display: flex;
 
     align-items: center;
 
     justify-content: center;
-
-    background:
-        linear-gradient(
-            135deg,
-            #fde8f1,
-            #f9d1e1
-        );
-
-    color: var(--pink-dark);
-
-    font-size: 1rem;
-
-    font-weight: 700;
 }
 
+
+.product-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.product-card:hover
+.product-image img {
+
+    transform: scale(1.04);
+}
+
+
+/* ================= PRODUCT INFO ================= */
 
 .product-info {
     padding: 22px;
@@ -674,7 +690,6 @@ button {
 /* ================= OFFERS ================= */
 
 .offer-section {
-
     padding: 80px 0;
 }
 
@@ -704,11 +719,12 @@ button {
 
 .offer-box h2 {
 
-    font-size: clamp(
-        2rem,
-        4vw,
-        3.2rem
-    );
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3.2rem
+        );
 
     line-height: 1.1;
 
@@ -735,24 +751,25 @@ button {
 
 
 .contact-content {
-
     max-width: 650px;
 }
 
 
 .contact-content h2 {
 
-    font-size: clamp(
-        2rem,
-        4vw,
-        3rem
-    );
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3rem
+        );
 
     margin-bottom: 15px;
 }
 
 
-.contact-content > p:not(.eyebrow) {
+.contact-content >
+p:not(.eyebrow) {
 
     color: var(--text-light);
 
@@ -826,7 +843,8 @@ button {
 
 .footer-bottom {
 
-    border-top: 1px solid #514650;
+    border-top:
+        1px solid #514650;
 
     text-align: center;
 
@@ -838,7 +856,7 @@ button {
 }
 
 
-/* ================= RESPONSIVE ================= */
+/* ================= TABLET ================= */
 
 @media (max-width: 900px) {
 
@@ -858,7 +876,9 @@ button {
 
 
     .hero-description {
+
         margin-left: auto;
+
         margin-right: auto;
     }
 
@@ -909,7 +929,9 @@ button {
 
 
     .footer-content p {
+
         margin-left: auto;
+
         margin-right: auto;
     }
 
@@ -921,13 +943,17 @@ button {
 }
 
 
+/* ================= MOBILE ================= */
+
 @media (max-width: 650px) {
 
     .container {
-        width: min(
-            calc(100% - 28px),
-            var(--container)
-        );
+
+        width:
+            min(
+                calc(100% - 28px),
+                var(--container)
+            );
     }
 
 
@@ -988,7 +1014,8 @@ button {
 
     .product-grid {
 
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            repeat(2, 1fr);
 
         gap: 12px;
     }
